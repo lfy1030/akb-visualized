@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+
+	<title>Objects</title>
+	<link rel="stylesheet" type="text/css" href="../../media/css/jquery.dataTables.css">
+	<link rel="stylesheet" type="text/css" href="../resources/syntax/shCore.css">
+	<link rel="stylesheet" type="text/css" href="../resources/demo.css">
+   	 <!-- Bootstrap core CSS -->
+    	<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    	<!-- Bootstrap theme -->
+    	<link href="http://getbootstrap.com/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+   	 <!-- Custom styles for this template -->
+    	<link href="http://getbootstrap.com/examples/theme/theme.css" rel="stylesheet">
+    	<!-- Latest compiled and minified CSS -->
+    	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.8.1/bootstrap-table.min.css">
+	<style type="text/css" class="init">
+	</style>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    	<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    	<script src="http://getbootstrap.com/assets/js/docs.min.js"></script>
+</script>
+</head>
+
+<body>
+	<!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://minnanodata.hikari-project.com/">Deconding Minna no Data</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+             <li><a href="http://minnanodata.hikari-project.com/">Home</a></li>
+	      <li class="active"><a href="http://minnanodata.hikari-project.com/table.html">View Data</a></li>
+            <li><a href="http://minnanodata.hikari-project.com/vis1.html">Graph By Food Category</a></li>
+            <li><a href="http://minnanodata.hikari-project.com/vis2.html">Graph By Prefecture</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+     <div class="container theme-showcase" role="main">
+
+     <div class="page-header">
+        <h1>View by Prefecture</h1>
+      </div>
+      <div class="dropdown">
+          
+      <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+         Select Prefecture
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/aichi.html">Aichi</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/akita.html">Akita</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/aomori.html">Aomori</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/chiba.html">Chiba</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/fukushima.html">Fukushima</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/gifu.html">Gifu</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/gunma.html">Gunma</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/hiroshima.html">Hiroshima</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/hyogo.html">Hyogo</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/ibaraki.html">Ibaraki</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/iwate.html">Iwate</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/kanagawa.html">Kanagawa</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/kochi.html">Kochi</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/kumamoto.html">Kumamoto</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/miyago.html">Miyagi</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/nagano.html">Nagano</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/niigata.html">Niigata</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/okayama.html">Okayama</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/saitama.html">Saitama</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/shizuoka.html">Shizuoka</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/tochigi.html">Tochigi</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/tokyo.html">Tokyo</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/toyama.html">Toyama</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/yamagata.html">Yamagata</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/yamanashi.html">Yamanashi</a></li>
+      </ul>
+    </div>
+     
+       <div class="page-header">
+        <h1>View by Category</h1>
+      </div>
+      <div class="dropdown">
+          
+      <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+          Select Category
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/beans.html">Beans</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/beverage.html">Beverage</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/cereals.html">Cereals</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/confectionery.html">Confectionery</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/dairy.html">Dairy</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/eggs.html">Eggs</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/environment.html">Environment</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/fruits.html">Fruits</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/herbs.html">Herbs</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/meats.html">Meats</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/nutseeds.html">Nuts & Seeds</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/plants.html">Edible Wild Plants</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/potatoes.html">Potatoes</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/processed.html">Processed Foods</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/seafood.html">Seafood</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/seasoning.html">Seasoning and spice</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/seaweed.html">Seaweed</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/veg.html">Vegetables</a></li>
+    </div>
+     
+
+     </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+n<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+
+	<title>Objects</title>
+	<link rel="stylesheet" type="text/css" href="../../media/css/jquery.dataTables.css">
+	<link rel="stylesheet" type="text/css" href="../resources/syntax/shCore.css">
+	<link rel="stylesheet" type="text/css" href="../resources/demo.css">
+   	 <!-- Bootstrap core CSS -->
+    	<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    	<!-- Bootstrap theme -->
+    	<link href="http://getbootstrap.com/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+   	 <!-- Custom styles for this template -->
+    	<link href="http://getbootstrap.com/examples/theme/theme.css" rel="stylesheet">
+    	<!-- Latest compiled and minified CSS -->
+    	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.8.1/bootstrap-table.min.css">
+	<style type="text/css" class="init">
+	</style>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    	<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    	<script src="http://getbootstrap.com/assets/js/docs.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../../media/js/jquery.js"></script>
+	<script type="text/javascript" language="javascript" src="../../media/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" language="javascript" src="../resources/syntax/shCore.js"></script>
+	<script type="text/javascript" language="javascript" src="../resources/demo.js"></script>
+	<script type="text/javascript" language="javascript" class="init">
+
+$(document).ready(function() {
+	$('#example').dataTable( {
+		"ajax": "data.txt",
+		"columns": [
+			{ "data": "Prefecture" },
+			{ "data": "Name" },
+			{ "data": "Location" },
+			{ "data": "Cs-134" },
+			{ "data": "Cs-134 MDA" },
+			{ "data": "Cs-137" },
+			{ "data": "Cs-137 MDA" },
+			{ "data": "Date" },
+			{ "data": "Time Measures (sec)" },
+			{ "data": "Instrument" },
+			{ "data": "Lab" },
+			{ "data": "Cat 1" },
+			{ "data": "Cat 2" },
+			{ "data": "Cat 3" }
+		]
+	} );
+} );
+
+
+
+</script>
+</head>
+
+<body>
+	<!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://minnanodata.hikari-project.com/">Deconding Minna no Data</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+             <li><a href="http://minnanodata.hikari-project.com/">Home</a></li>
+	      <li class="active"><a href="http://minnanodata.hikari-project.com/table.html">View Data</a></li>
+            <li><a href="http://minnanodata.hikari-project.com/vis1.html">Graph By Food Category</a></li>
+            <li><a href="http://minnanodata.hikari-project.com/vis2.html">Graph By Prefecture</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+	<div class="container">
+		<section>
+			<h1>View Data</span></h1>
+
+			<table id="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th>Prefecture</th>
+						<th>Name</th>
+						<th>Location</th>
+						<th>Cs-134</th>
+						<th>Cs-134 MDA</th>
+						<th>Cs-137</th>
+						<th>Cs-137 MDA</th>
+						<th>Date</th>
+						<th>Time Measured</th>
+						<th>Instrument</th>
+						<th>Lab</th>
+						<th>Category</th>
+						<th>Sub-Category 1</th>
+						<th>Sub Category 2</th>
+					</tr>
+				</thead>
+
+				<tfoot>
+					<tr>
+						<th>Prefecture</th>
+						<th>Name</th>
+						<th>Location</th>
+						<th>Cs-134</th>
+						<th>Cs-134 MDA</th>
+						<th>Cs-137</th>
+						<th>Cs-137 MDA</th>
+						<th>Date</th>
+						<th>Time Measured</th>
+						<th>Instrument</th>
+						<th>Lab</th>
+						<th>Category</th>
+						<th>Sub-Category 1</th>
+						<th>Sub Category 2</th>
+					</tr>
+				</tfoot>
+			</table>
+
+		</section>
+	</div>
+</body>
+</html>
