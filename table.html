@@ -1,123 +1,172 @@
+
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-	<title>Objects</title>
-	<link rel="stylesheet" type="text/css" href="../../media/css/jquery.dataTables.css">
-	<link rel="stylesheet" type="text/css" href="../resources/syntax/shCore.css">
-	<link rel="stylesheet" type="text/css" href="../resources/demo.css">
-   	 <!-- Bootstrap core CSS -->
-    	<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-    	<!-- Bootstrap theme -->
-    	<link href="http://getbootstrap.com/dist/css/bootstrap-theme.min.css" rel="stylesheet">
-   	 <!-- Custom styles for this template -->
-    	<link href="http://getbootstrap.com/examples/theme/theme.css" rel="stylesheet">
-    	<!-- Latest compiled and minified CSS -->
-    	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.8.1/bootstrap-table.min.css">
-	<style type="text/css" class="init">
-	</style>
-	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    	<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
-    	<script src="http://getbootstrap.com/assets/js/docs.min.js"></script>
-</script>
-</head>
+	<title>AKB Visualized</title>
 
-<body>
+	<!-- Bootstrap core CSS -->
+	<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Bootstrap theme -->
+	<link href="http://getbootstrap.com/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="http://getbootstrap.com/examples/theme/theme.css" rel="stylesheet">
+  </head>
+
+  <body role="document">
+
 	<!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="http://minnanodata.hikari-project.com/">Deconding Minna no Data</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-             <li><a href="http://minnanodata.hikari-project.com/">Home</a></li>
-	      <li class="active"><a href="http://minnanodata.hikari-project.com/table.html">View Data</a></li>
-            <li><a href="http://minnanodata.hikari-project.com/vis1.html">Graph By Food Category</a></li>
-            <li><a href="http://minnanodata.hikari-project.com/vis2.html">Graph By Prefecture</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-     <div class="container theme-showcase" role="main">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="http://akb-visualized.hikari-project.com/">AKB Visualized</a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+		  <ul class="nav navbar-nav">
+			<li><a href="http://akb-visualized.hikari-project.com/">Home</a></li>
+			<li><a href="http://akb-visualized.hikari-project.com/vis1.html">2D View</a></li>
+			<li><a href="http://akb-visualized.hikari-project.com/vis2.html">3D View</a></li>
+			<li class="active"><a href="http://akb-visualized.hikari-project.com/table.html">Directory</a></li>
+			<li><a href="https://github.com/lfy1030/akb-visualized">GitHub</a></li>
+		  </ul>
+		</div><!--/.nav-collapse -->
+	  </div>
+	</nav>
 
-     <div class="page-header">
-        <h1>View by Prefecture</h1>
-      </div>
-      <div class="dropdown">
-          
-      <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-         Select Prefecture
-        <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/aichi.html">Aichi</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/akita.html">Akita</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/aomori.html">Aomori</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/chiba.html">Chiba</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/fukushima.html">Fukushima</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/gifu.html">Gifu</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/gunma.html">Gunma</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/hiroshima.html">Hiroshima</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/hyogo.html">Hyogo</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/ibaraki.html">Ibaraki</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/iwate.html">Iwate</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/kanagawa.html">Kanagawa</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/kochi.html">Kochi</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/kumamoto.html">Kumamoto</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/miyago.html">Miyagi</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/nagano.html">Nagano</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/niigata.html">Niigata</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/okayama.html">Okayama</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/saitama.html">Saitama</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/shizuoka.html">Shizuoka</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/tochigi.html">Tochigi</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/tokyo.html">Tokyo</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/toyama.html">Toyama</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/yamagata.html">Yamagata</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/yamanashi.html">Yamanashi</a></li>
-      </ul>
-    </div>
-     
-       <div class="page-header">
-        <h1>View by Category</h1>
-      </div>
-      <div class="dropdown">
-          
-      <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-          Select Category
-        <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/beans.html">Beans</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/beverage.html">Beverage</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/cereals.html">Cereals</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/confectionery.html">Confectionery</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/dairy.html">Dairy</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/eggs.html">Eggs</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/environment.html">Environment</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/fruits.html">Fruits</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/herbs.html">Herbs</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/meats.html">Meats</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/nutseeds.html">Nuts & Seeds</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/plants.html">Edible Wild Plants</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/potatoes.html">Potatoes</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/processed.html">Processed Foods</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/seafood.html">Seafood</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/seasoning.html">Seasoning and spice</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/seaweed.html">Seaweed</a></li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://minnanodata.hikari-project.com/veg.html">Vegetables</a></li>
-    </div>
-     
+	<div class="container theme-showcase" role="main">
 
-     </div>
-</body>
+	  <div class="page-header">
+		<h1>Song Directory</h1>
+		<p>This shows the graph for each song. Click for the interactive version! The title links to the reference used for transcribing the song</p>
+	  </div>
+
+		<div class="col-md-6">
+		  <table class="table table-striped">
+			<thead>
+			  <tr>
+			  	<th>#</th>
+				<th>Title</th>
+				<th>Title(Japanese)</th>
+				<th>Year</th>
+				<th>Graph</th>
+			  </tr>
+			</thead>
+			<tbody>
+<tr>
+<td>1</td>
+<td><a href="https://www.youtube.com/watch?v=9eLRfmNZ6yk" target="_blank">Sakura no hanabiratachi</a></td>
+<td>桜の花びらたち</td>
+<td>2006</td>
+<td><a href="https://plot.ly/~lfangyi/129" target="_blank"><img src="https://plot.ly/~lfangyi/129.png" alt="Graph" style="width:490px;height:350px;"></a></td></tr>
+<tr>
+<td>2</td>
+<td><a href="https://www.youtube.com/watch?v=0YPMFkGjsog" target="_blank">Skirt, Hirari</a></td>
+<td>スカート、ひらり</td>
+<td>2006</td>
+<td><a href="https://plot.ly/~lfangyi/132" target="_blank"><img src="https://plot.ly/~lfangyi/132.png" alt="Graph" style="width:490px;height:350px;"></a></td></tr>
+<tr>
+<td>3</td>
+<td><a href="https://www.youtube.com/watch?v=xBMfLT_3vJY" target="_blank">Aitakatta</a></td>
+<td>会いたかった</td>
+<td>2006</td>
+<td><a href="https://plot.ly/~lfangyi/135" target="_blank"><img src="https://plot.ly/~lfangyi/135.png" alt="Graph" style="width:490px;height:350px;"></a></td></tr>
+<tr>
+<td>4</td>
+<td><a href="https://www.youtube.com/watch?v=g-bM4sSfj20" target="_blank">Seifuku ga jama wo suru</a></td>
+<td>制服が邪魔をする</td>
+<td>2007</td>
+<td><a href="https://plot.ly/~lfangyi/138" target="_blank"><img src="https://plot.ly/~lfangyi/138.png" alt="Graph" style="width:490px;height:350px;"></a></td></tr>
+<tr>
+<td>5</td>
+<td><a href="https://www.youtube.com/watch?v=ax0hckpfURM" target="_blank">Keibetsu shite ita aijou</a></td>
+<td>軽蔑していた愛情</td>
+<td>2007</td>
+<td><a href="https://plot.ly/~lfangyi/141" target="_blank"><img src="https://plot.ly/~lfangyi/141.png" alt="Graph" style="width:490px;height:350px;"></a></td></tr>
+<tr>
+<td>6</td>
+<td><a href="https://www.youtube.com/watch?v=f_ejnFXUrTM" target="_blank">BINGO!</a></td>
+<td>BINGO!</td>
+<td>2007</td>
+<td><a href="https://plot.ly/~lfangyi/144" target="_blank"><img src="https://plot.ly/~lfangyi/144.png" alt="Graph" style="width:490px;height:350px;"></a></td></tr>
+<tr>
+<td>7</td>
+<td><a href="https://www.youtube.com/watch?v=XSRZBK2dgl4" target="_blank">Boku no taiyou</a></td>
+<td>僕の太陽</td>
+<td>2007</td>
+<td><a href="https://plot.ly/~lfangyi/147" target="_blank"><img src="https://plot.ly/~lfangyi/147.png" alt="Graph" style="width:490px;height:350px;"></a></td></tr>
+<tr>
+<td>8</td>
+<td><a href="https://www.youtube.com/watch?v=PJ-QrYy9gDs" target="_blank">Yuuhi wo mite iru ka?</a></td>
+<td>夕陽を見ているか?</td>
+<td>2007</td>
+<td><a href="https://plot.ly/~lfangyi/150" target="_blank"><img src="https://plot.ly/~lfangyi/150.png" alt="Graph" style="width:490px;height:350px;"></a></td></tr>
+<tr>
+<td>9</td>
+<td><a href="https://www.youtube.com/watch?v=WjNLEU7LWMc" target="_blank">Romance, Irane</a></td>
+<td>ロマンス、イラネ</td>
+<td>2008</td>
+<td><a href="https://plot.ly/~lfangyi/154" target="_blank"><img src="https://plot.ly/~lfangyi/154.png" alt="Graph" style="width:490px;height:350px;"></a></td></tr>
+<tr>
+<td>10</td>
+<td><a href="https://www.youtube.com/watch?v=yNg3mcjhq9w" target="_blank">Baby! Baby! Baby!</a></td>
+<td>Baby! Baby! Baby!</td>
+<td>2008</td>
+<td><a href="https://plot.ly/~lfangyi/157" target="_blank"><img src="https://plot.ly/~lfangyi/157.png" alt="Graph" style="width:490px;height:350px;"></a></td></tr>
+<tr>
+<td>11</td>
+<td><a href="https://www.youtube.com/watch?v=F32epua9VQs" target="_blank">Oogoe Diamond</a></td>
+<td>大声ダイヤモンド</td>
+<td>2008</td>
+<td><a href="https://plot.ly/~lfangyi/160" target="_blank"><img src="https://plot.ly/~lfangyi/160.png" alt="Graph" style="width:490px;height:350px;"></a></td></tr>
+<tr>
+<td>12</td>
+<td><a href="https://www.youtube.com/watch?v=iyn5uirg2j8" target="_blank">10nen zakura</a></td>
+<td>10年桜</td>
+<td>2009</td>
+<td><a href="https://plot.ly/~lfangyi/163" target="_blank"><img src="https://plot.ly/~lfangyi/163.png" alt="Graph" style="width:490px;height:350px;"></a></td></tr>
+<tr>
+<td>13</td>
+<td><a href="https://www.youtube.com/watch?v=Y2evRDphNDY" target="_blank">Namida Surprise!</a></td>
+<td>涙サプライズ!</td>
+<td>2009</td>
+<td><a href="https://plot.ly/~lfangyi/167" target="_blank"><img src="https://plot.ly/~lfangyi/167.png" alt="Graph" style="width:490px;height:350px;"></a></td></tr>
+<tr>
+<td>14</td>
+<td><a href="https://www.youtube.com/watch?v=B9xP3CcKe9E" target="_blank">Iiwake Maybe</a></td>
+<td>言い訳Maybe</td>
+<td>2009</td>
+<td><a href="https://plot.ly/~lfangyi/170" target="_blank"><img src="https://plot.ly/~lfangyi/170.png" alt="Graph" style="width:490px;height:350px;"></a></td></tr>
+
+
+			</tbody>
+		  </table>
+		</div>
+	  </div>
+
+   
+	</div> <!-- /container -->
+
+
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+	<script src="http://getbootstrap.com/assets/js/docs.min.js"></script>
+  </body>
 </html>
+
+

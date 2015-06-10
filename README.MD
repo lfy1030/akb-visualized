@@ -18,4 +18,4 @@ The music data is visualized with [plot.ly](https://plot.ly/) in python
 
 ## Stage 4: Presentation
 
-Python is used to generate some of the html files used in the final project website
+Python is used to generate some of the html files used on the website
